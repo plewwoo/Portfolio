@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <div class="circle">
+        </div>
+        <header>
+            <div class="logo">
+                <a href="#"><img src="pic/logo.png" alt="logo"></a>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="text-box">
+                <h2>It's not just Coffee <br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam minus laudantium ducimus cupiditate repudiandae nemo illum facere? Laboriosam illum iure voluptate optio debitis. Dolorem architecto odit placeat culpa libero doloribus.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="pic-box">
+                <img class="starbucks" src="pic/img1.png" alt="img1">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="pic/thumb1.png" alt="thumb1" onclick="imgslider('pic/img1.png');changeCircleColor('#017143')"></li>
+            <li><img src="pic/thumb2.png" alt="thumb2" onclick="imgslider('pic/img2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="pic/thumb3.png" alt="thumb3" onclick="imgslider('pic/img3.png');changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="pic/facebook.png" alt="fb"></a></li>
+            <li><a href="#"><img src="pic/instagram.png" alt="ig"></a></li>
+            <li><a href="#"><img src="pic/twitter.png" alt="tw"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgslider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
+</html>
